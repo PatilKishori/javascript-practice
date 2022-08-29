@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="text" id="value">
+    <br>
+    <br>
+    <button type="button" onclick="setcookie()">Submit</button>
+    <button onclick="getcookie()">Get</button>
+    <button onclick="check()">Check</button>
+    <script>
+        function setcookie() {
+            let name = document.getElementById("name").value;
+            let value = document.getElementById("value").value;
+            var date = new Date()
+            date.setDate(date.getDate() + 10)
+            document.cookie = name + "=" + value + ";expires=" + date.toString();
+
+
+        }
+        function getcookie() {
+            let name = document.getElementById("name").value;
+            let value = check(name);
+            alert("Cookie value : " + value);
+        }
+
+        function check(name) {
+            var str = document.cookie;
+            var cookies = str.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                let mycookies = cookies[i].split("=");
+                if (mycookies[0].trim() == name) {
+                    return mycookies[1];
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+
+</html>
