@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="addition"></h1>
+    <label for="">Enter a text</label>
+    <input type="text" id="no1" onkeyup="add()">
+    <select name="" id="text" onchange="fun()">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+
+    </select>
+    <script>
+        function add()
+        {
+            var ctrl = document.getElementById("no1");
+            var no2 = ctrl.value;
+            var addi = document.getElementById("addition");
+            addi.innerText = (no2);
+        }
+    function fun() {
+            
+        var color = document.getElementById("text").value;
+        document.getElementById("addition").style.color = color;
+            
+        }
+        fun();
+    </script>
+
+
+</body>
+
+</html>

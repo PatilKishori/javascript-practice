@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1{
+            position: absolute;
+            height: 300px;
+            margin-top:0;
+            margin-bottom:0;
+        }
+        #img2{
+            height: 300px;
+            z-index: 25px;
+            margin-top: 70px;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="darkimg.jpg" alt="">
+    <img  id="img2" src="img2.jpg" alt=""><br>
+    <button type="button" id="btn1" onclick="fun1()">Night</button>
+    <button type="button" id="btn2" onclick="fun2()">Day</button>
+    <script>
+        function fun1()
+        { 
+            document.getElementById("img1").style.zIndex=1;
+        }
+         function fun2() 
+        {
+            document.getElementById("img1").style.zIndex=-1;
+        }
+
+    </script>
+</body>
+</html>

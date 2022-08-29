@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="darkimg.jpg" alt="" id="imgid" style="height: 400px;">
+    <label for="">Image radius</label>
+    <input type="range" min="1" max="100" id="inputid" oninput="img()">
+    <label for="">Image </label>
+    <input type="range" id="range" min="0" max="1" oninput="fun()" step="0.1" value="0.5">
+    <script>
+         function img()
+         {
+            document.getElementById("imgid").style.borderRadius=document.getElementById("inputid").value + "%";
+         
+        }
+        function fun()
+        {
+            document.getElementById("imgid").style.opacity=document.getElementById("range").value;
+        }
+    </script>
+</body>
+</html>
